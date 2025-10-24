@@ -1,0 +1,210 @@
+@font-face {
+  font-family: 'Golos Text';
+  src: url('/static/font/GolosText-Regular.woff2') format('woff2'),
+       url('/static/font/GolosText-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Golos Text';
+  src: url('/static/font/GolosText-Medium.woff2') format('woff2'),
+       url('/static/font/GolosText-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Golos Text';
+  src: url('/static/font/GolosText-Bold.woff2') format('woff2'),
+       url('/static/font/GolosText-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+html {
+  color: #000000;
+  background: #ffffff;
+  scroll-behavior: smooth;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Golos Text,Helvetica,Arial,sans-serif;
+  font-stretch: normal;
+  font-feature-settings: "kern" on,"liga" on,"calt" on,"tnum" off,"case" off,"rlig" on,"zero" off,"ss01" off;
+  overflow-y: overlay;
+}
+html[transition] {
+  transition: all 500ms ease;
+}
+body {
+  max-width: 720px;
+  padding: 0 14px;
+  margin: 0 auto;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+ol,
+ul {
+  list-style: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+ol,
+li,
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+input,
+select,
+textarea {
+  font-family: inherit;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+}
+pre,
+code {
+  font-family: inherit;
+}
+input:-webkit-autofill {
+  -webkit-text-fill-color: #333333 !important;
+
+  -webkit-transition: background-color 2592000s ease-in-out 0s;
+  transition: background-color 2592000s ease-in-out 0s;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #999999;
+}
+::selection {
+  background-color: #4a4a4a;
+  color: #f9f9f9;
+}
+.hide {
+  display: none !important;
+}
+.hover-underline {
+  position: relative;
+  transition: font-weight 150ms ease-in-out;
+}
+.hover-underline:hover {
+  font-weight: 500;
+}
+.header {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+}
+.header .logo {
+  flex-shrink: 0;
+  width: 28px;
+  height: 81px;
+  margin-right: 10px;
+  -webkit-user-drag: none;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  position: relative;
+  padding: 10px 0;
+}
+.social-links {
+  display: inline-block;
+  gap: 10px;
+}
+.footer a {
+  color: #000000;
+  padding: 0 4px;
+  white-space: nowrap;
+}
+.ner {
+    writing-mode: vertical-lr;
+}
+.digits {
+text-orientation: upright;
+display: inline-block;   
+transform: translateX(-0.3em);
+}
+.footer-btn {
+  position: fixed;
+  z-index: 99;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+}
+.footer-btn i {
+  font-size: 22px;
+  background-color: #ffffff;
+}
+.footer-btn.theme-toggler {
+  right: 16px;
+  bottom: 16px;
+}
+.footer-btn.to-top {
+  right: 16px;
+  bottom: -50px;
+  transition: bottom 200ms ease-in-out;
+}
+.footer-btn.to-top.show {
+  bottom: 16px;
+}
+.svg-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  background-color: #000000;
+}
+.icon-loading {
+  mask-image: url('../img/icon-loading.svg');
+  -webkit-mask-image: url('../img/icon-loading.svg');
+}
+.icon-theme-dark {
+  mask-image: url('../img/icon-theme-dark.svg');
+  -webkit-mask-image: url('../img/icon-theme-dark.svg');
+}
+.icon-theme-light {
+  mask-image: url('../img/icon-theme-light.svg');
+  -webkit-mask-image: url('../img/icon-theme-light.svg');
+}
+.icon-arrow-top {
+  mask-image: url('../img/icon-arrow-top.svg');
+  -webkit-mask-image: url('../img/icon-arrow-top.svg');
+}
+@media screen and (max-width: 560px) {
+  .header {
+    padding: 10px 0;
+    justify-content: flex-start;
+  }
+}
