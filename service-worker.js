@@ -18,8 +18,8 @@ self.addEventListener('install', function (event) {
     fetch(baseUrl + '/index.html')
       .then(resp => resp.text())
       .then(html => {
-        let reg = /(href|src)=\"(.+?)\"/g // 匹配链接
-        let reg2 = /#.*/ // 去除hash
+        let reg = /(href|src)=\"(.+?)\"/g
+        let reg2 = /#.*/
         let urls = []
         let match
         while ((match = reg.exec(html)) !== null) {
