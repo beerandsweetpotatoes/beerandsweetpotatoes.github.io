@@ -142,6 +142,8 @@ input:-webkit-autofill {
 }
 .ner {
     writing-mode: vertical-lr;
+    text-orientation: mixed;
+    font-family: "Noto Sans Mongolian";
 }
 .digits {
 text-orientation: upright;
