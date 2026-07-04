@@ -6,18 +6,18 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-title: ""
-description: Соёлын ажиглалт
+title: "Соёлын ажиглалт"
+description: Соёл, уран зохиол, нийгмийн тухай эссэ ба нийтлэл
 url: "http://arvis.xyz"
-tagline: Соёлын ажиглалт
+tagline: Соёл, уран зохиол, нийгмийн тухай эссэ ба нийтлэл
 logo: "/static/img/logo.jpg"
 keywords: Хүн,Соёл,Түүх,Нийгэм,Урлаг,Аялал,Уран зохиол,Ном
-author: Арвис
+author: Арвис ᠠᠷᠪᠢᠰ
 footerText: ''
 social: 
   links:
-  - https://www.instagram.com/arvis.xyz
-  - https://www.x.com/arvisxyz
+  - https://www.instagram.com/arvisbaina
+  - https://www.x.com/arvisbaina
 
 permalink: /:slug/
 kramdown:
@@ -36,7 +36,3 @@ extClickEffect: true
 feed:
   excerpt_only: true
   limit: 20
-
-
-
-
