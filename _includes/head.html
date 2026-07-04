@@ -1,20 +1,21 @@
 {%- assign buildAt = site.time | date: "%Y%m%d%H%M%S" -%}
-<html lang="mn">
 <head>
   <meta charset="utf-8" />
   <meta name="theme-color" content="#ffffff" />
   <meta name="supported-color-schemes" content="light dark" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="{{site.baseurl}}/static/img/favicon.ico" />
+  <link rel="preload" href="{{site.baseurl}}/static/font/GolosText-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{site.baseurl}}/static/font/GolosText-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="apple-touch-icon" href="{{site.baseurl}}/static/img/logo.png" />
-  <link rel="stylesheet" href="{{site.baseurl}}/static/css/common.css?t={{buildAt}}" />
-  <link rel="stylesheet" href="{{site.baseurl}}/static/css/theme-dark.css?t={{buildAt}}" />
+  <link rel="stylesheet" href="{{site.baseurl}}/static/css/common.css?v={{ site.github.build_revision }}" />
+  <link rel="stylesheet" href="{{site.baseurl}}/static/css/theme-dark.css?v={{ site.github.build_revision }}">
   {%- if page.layout == "mypost" %}
-  <link rel="stylesheet" href="{{site.baseurl}}/static/css/post.css?t={{buildAt}}" />
-  <link rel="stylesheet" href="{{site.baseurl}}/static/css/code-dark.css?t={{buildAt}}" />
-  <link rel="stylesheet" href="{{site.baseurl}}/static/css/code-light.css?t={{buildAt}}" />
+  <link rel="stylesheet" href="{{site.baseurl}}/static/css/post.css?v={{ site.github.build_revision }}" />
+  <link rel="stylesheet" href="{{site.baseurl}}/static/css/code-dark.css?v={{ site.github.build_revision }}" />
+  <link rel="stylesheet" href="{{site.baseurl}}/static/css/code-light.css?v={{ site.github.build_revision }}" />
   {%- endif %} {%- if page.layout == "page" %}
-  <link rel="stylesheet" href="{{site.baseurl}}/static/css/page.css?t={{buildAt}}" />
+  <link rel="stylesheet" href="{{site.baseurl}}/static/css/page.css?v={{ site.github.build_revision }}" />
   {%- endif %}
   <script>
     window.blog = {
@@ -26,7 +27,8 @@
         else if (flag && flag === 'false') this.darkMode = false
         else this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
         document.documentElement.className = this.darkMode ? 'dark' : ''
-        document.querySelector('meta[name=theme-color]').setAttribute('content', this.darkMode ? '#2D2E32' : '#FFFFFF')
+        const meta = document.querySelector('meta[name=theme-color]')
+        if (meta) meta.setAttribute('content', this.darkMode ? '#2D2E32' : '#FFFFFF')
       }
     }
     blog.initDarkMode(localStorage.darkMode)
@@ -35,4 +37,5 @@
   {% if jekyll.environment == 'production' and site.google_analytics %}
     {% include analytics.html %}
   {% endif %}
+  <script src="{{site.baseurl}}/static/js/blog.js" defer></script>
 </head>
