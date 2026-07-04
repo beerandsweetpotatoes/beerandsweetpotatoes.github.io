@@ -3,6 +3,7 @@
 {% include head.html -%}
 <body>
 {% include header.html -%}
+<main>
 <div class="page page-post">
   <h1 class="title" id="{{ page.title }}">{{ page.title }}</h1>
   {% if page.date %}
@@ -39,6 +40,7 @@
   </div>
 </div>
 </div>
+</main>
 {% include footer.html -%}
 {% include script.html -%}
 </body>
