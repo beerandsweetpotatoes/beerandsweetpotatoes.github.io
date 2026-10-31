@@ -8,7 +8,7 @@ plugins:
 
 title: "Соёлын ажиглалт"
 description: Соёл, уран зохиол, нийгмийн тухай эссэ ба нийтлэл
-url: "https://arvis.xyz"
+url: "https://www.arvis.xyz"
 tagline: Соёл, уран зохиол, нийгмийн тухай эссэ ба нийтлэл
 logo: "/static/img/logo.jpg"
 keywords: Хүн,Соёл,Түүх,Нийгэм,Урлаг,Аялал,Уран зохиол,Ном
@@ -27,7 +27,7 @@ kramdown:
   syntax_highlighter: rouge
 exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.lock', 'blog.sh', 'node_modules', 'vendor']
 
-domainUrl: 'https://arvis.xyz'
+domainUrl: 'https://www.arvis.xyz'
 baseurl: ''
 
 google_analytics: "G-C80FJYNJFK"
