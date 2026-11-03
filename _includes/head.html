@@ -28,7 +28,7 @@
         else this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
         document.documentElement.className = this.darkMode ? 'dark' : ''
         const meta = document.querySelector('meta[name=theme-color]')
-        if (meta) meta.setAttribute('content', this.darkMode ? '#2D2E32' : '#FFFFFF')
+        if (meta) meta.setAttribute('content', this.darkMode ? '#121212' : '#FAFAFA')
       }
     }
     blog.initDarkMode(localStorage.darkMode)
