@@ -7,12 +7,9 @@ plugins:
   - jekyll-sitemap
 
 title: "Арвис"
-description: Соёл, уран зохиол, нийгмийн тухай эссэ ба нийтлэл
 url: "https://www.arvis.xyz"
-tagline: Соёл, уран зохиол, нийгмийн тухай эссэ ба нийтлэл
 logo: "/static/img/logo.jpg"
-keywords: Хүн,Соёл,Түүх,Нийгэм,Урлаг,Аялал,Уран зохиол,Ном
-author: Арвис ᠠᠷᠪᠢᠰ
+author: Арвис
 locale: mn_MN
 footerText: ''
 social: 
